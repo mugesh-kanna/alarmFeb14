@@ -17,7 +17,7 @@ export class AppComponent {
   constructor(
     private renderer2: Renderer2,
     private elementRef: ElementRef,
-  ) {}
+  ) { }
 
   ngOnInit() {
     AOS.init({ duration: 1000 });//AOS - 2
@@ -33,29 +33,31 @@ export class AppComponent {
     myConfetti();
   }
 
-  showSurprise(){
+  showSurprise() {
     this.showMail = false;
     this.surprise();
   }
 
-  showVideo(video: any){
+  showVideo(video: any) {
     this.videoUrl = video;
-    if(video == 1){
+    if (video == 1) {
+      window.open("https://drive.google.com/file/d/14TtMFo2D1VlpR9FPZ8KIe3pMxHRQ1-4i/view?usp=sharing");
       // this.videoUrl = "../assets/video-1.mp4";
       this.videoHeader = "LOVE 50%";
-      this.displayModal = true;
+      // this.displayModal = true;
     }
-    else if(video == 2){
+    else if (video == 2) {
+      window.open("https://drive.google.com/file/d/14UblW9jSUB3vpyFyLIs9ZSnAVmHdkwqZ/view?usp=sharing");
       // this.videoUrl = "../assets/video-2.mp4";
       this.videoHeader = "LOVE 75%";
-      this.displayModal = true;
+      // this.displayModal = true;
     }
-    else{
+    else {
+      window.open("https://drive.google.com/file/d/14a9DYweJZsyo2aozIjk8LqdxxeBOma0n/view?usp=sharing")
       // this.videoUrl = "../assets/video-3.mp4";
       this.videoHeader = "LOVE 100%";
-      this.displayModal = true;
-    }    
+      // this.displayModal = true;
+    }
   }
 
-  
 }

@@ -14,21 +14,21 @@
   <div class="row mt-4 text-center" *ngIf="!showMail" data-aos="zoom-in">
     <h3 class="my-4">Don't kill my heart :) Just touch my heart one by one</h3>
     <div class="col-sm-12 col-md-4 mb-4">
-      <p-card header="LOVE - 50%">
+      <p-card header="LOVE When 50%">
         <div class="d-flex justify-content-center">
           <div id="heart" (click)="showVideo(1)" class="cursor-pointer"></div>
         </div>
       </p-card>
     </div>
     <div class="col-sm-12 col-md-4 mb-4">
-      <p-card header="LOVE - 75%">
+      <p-card header="LOVE When 75%">
         <div class="d-flex justify-content-center">
           <div id="heart" (click)="showVideo(2)" class="cursor-pointer"></div>
         </div>
       </p-card>
     </div>
     <div class="col-sm-12 col-md-4 mb-4">
-      <p-card header="LOVE - 100%">
+      <p-card header="LOVE When 100%">
         <div class="d-flex justify-content-center">
           <div id="heart" (click)="showVideo(3)" class="cursor-pointer"></div>
         </div>
@@ -59,10 +59,10 @@
   <div class="shadow2"></div>
 </div>
 
-<p-dialog [header]="videoHeader" [(visible)]="displayModal" [modal]="true" 
+<!-- <p-dialog [header]="videoHeader" [(visible)]="displayModal" [modal]="true" 
     [draggable]="false" [resizable]="false" appendTo="body">
     <video width="320" height="240" controls controlsList="nodownload" *ngIf="videoUrl == 1">
-      <source src="../assets/video-1.mp4" type="video/mp4">
+      <source src="https://drive.google.com/file/d/14TtMFo2D1VlpR9FPZ8KIe3pMxHRQ1-4i/view?usp=sharing" type="video/mp4">
     </video>
     <video width="320" height="240" controls controlsList="nodownload" *ngIf="videoUrl == 2">
       <source src="../assets/video-2.mp4" type="video/mp4">
@@ -73,4 +73,4 @@
     <ng-template pTemplate="footer">
         <p-button icon="pi pi-check" (click)="displayModal=false" label="Ok"></p-button>
         </ng-template>
-</p-dialog>
+</p-dialog> -->
