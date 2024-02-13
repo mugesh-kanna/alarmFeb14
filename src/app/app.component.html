@@ -1,0 +1,76 @@
+<div class="overall">
+
+</div>
+
+<div class="headerDay p-5">
+  <h1 class="text-center fw-4" style="font-weight: 700;" data-aos="fade-down">
+    <i class="pi pi-heart iconSize me-1"></i>
+    HAPPY VALENTINE'S DAY MY LOVE
+    <i class="pi pi-heart iconSize ms-1"></i>
+  </h1>
+  <h5 class="text-center" data-aos="fade-up">A small gift for you...</h5>
+  <!-- <div id="heart"></div> -->
+
+  <div class="row mt-4 text-center" *ngIf="!showMail" data-aos="zoom-in">
+    <h3 class="my-4">Don't kill my heart :) Just touch my heart one by one</h3>
+    <div class="col-sm-12 col-md-4 mb-4">
+      <p-card header="LOVE - 50%">
+        <div class="d-flex justify-content-center">
+          <div id="heart" (click)="showVideo(1)" class="cursor-pointer"></div>
+        </div>
+      </p-card>
+    </div>
+    <div class="col-sm-12 col-md-4 mb-4">
+      <p-card header="LOVE - 75%">
+        <div class="d-flex justify-content-center">
+          <div id="heart" (click)="showVideo(2)" class="cursor-pointer"></div>
+        </div>
+      </p-card>
+    </div>
+    <div class="col-sm-12 col-md-4 mb-4">
+      <p-card header="LOVE - 100%">
+        <div class="d-flex justify-content-center">
+          <div id="heart" (click)="showVideo(3)" class="cursor-pointer"></div>
+        </div>
+      </p-card>
+    </div>
+  </div>
+
+</div>
+
+<div class="letter-image" *ngIf="showMail">
+  <div class="animated-mail" (click)="surprise()" (mouseover)="surprise()">
+    <div class="back-fold"></div>
+    <div class="letter" (click)="showSurprise()">
+      <div class="letter-border"></div>
+      <div class="letter-title"></div>
+      <div class="letter-context"></div>
+      <div class="letter-context-body">
+        <p><strong>Wifeuuuuuu😍</strong><br> இதுல ஒன்னும் இல்ல😂, Click பண்ணிட்டு போ🤭</p>
+      </div>
+      <div class="letter-stamp">
+        <div class="letter-stamp-inner"></div>
+      </div>
+    </div>
+    <div class="top-fold"></div>
+    <div class="body"></div>
+    <div class="left-fold"></div>
+  </div>
+  <div class="shadow2"></div>
+</div>
+
+<p-dialog [header]="videoHeader" [(visible)]="displayModal" [modal]="true" 
+    [draggable]="false" [resizable]="false" appendTo="body">
+    <video width="320" height="240" controls controlsList="nodownload" *ngIf="videoUrl == 1">
+      <source src="../assets/video-1.mp4" type="video/mp4">
+    </video>
+    <video width="320" height="240" controls controlsList="nodownload" *ngIf="videoUrl == 2">
+      <source src="../assets/video-2.mp4" type="video/mp4">
+    </video>
+    <video width="320" height="240" controls controlsList="nodownload" *ngIf="videoUrl == 3">
+      <source src="../assets/video-3.mp4" type="video/mp4" >
+    </video>
+    <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="displayModal=false" label="Ok"></p-button>
+        </ng-template>
+</p-dialog>
